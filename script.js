@@ -4,9 +4,9 @@
 
 // URL ORACLE APEX REST API
 // AQUI DESPUES PONDRAS TU URL REAL
-const API_HW = "https://tu-api.onrender.com/productos_hw";
-const API_LICENCIAS = "https://tu-api.onrender.com/productos_licencias";
-const API_ORDENES = "https://tu-api.onrender.com/ordenes";
+const API_HW = "https://api-tienda-9zw4.onrender.com/productos_hw";
+const API_LICENCIAS = "https://api-tienda-9zw4.onrender.com/productos_licencias";
+const API_ORDENES = "https://api-tienda-9zw4.onrender.com/ordenes";
 
 const hardwareContainer = document.getElementById("hardware-container");
 const licenciasContainer = document.getElementById("licencias-container");
