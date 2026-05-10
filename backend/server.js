@@ -8,11 +8,11 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-    host: "bf9faenbvzeatsycngly-mysql.services.clever-cloud.com",
-    user: "uexk4el7oz6astki",
-    password: "l5lq7YZ5Zqns3wNk8iM6",
-    database: "bf9faenbvzeatsycngly",
-    port: 3306
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE,
+    port: process.env.PORT
 });
 
 app.get("/productos_hw", (req,res)=>{
