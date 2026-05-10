@@ -27,7 +27,7 @@ async function cargarHardware(){
         const response = await fetch(API_HW);
         const data = await response.json();
 
-        data.items.forEach(producto => {
+        data.forEach(producto => {
 
             hardwareContainer.innerHTML += `
                 <div class="card">
@@ -67,7 +67,7 @@ async function cargarLicencias(){
         const response = await fetch(API_LICENCIAS);
         const data = await response.json();
 
-        data.items.forEach(producto => {
+        data.forEach(producto => {
 
             licenciasContainer.innerHTML += `
                 <div class="card">
