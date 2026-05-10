@@ -70,6 +70,8 @@ app.post("/ordenes",(req,res)=>{
     );
 });
 
-app.listen(3000,()=>{
-    console.log("Servidor funcionando");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Servidor funcionando en puerto ${PORT}`);
 });
