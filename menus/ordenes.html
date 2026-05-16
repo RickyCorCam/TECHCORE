@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Órdenes</title>
+
+    <link rel="stylesheet" href="ordenesstyles.css">
+</head>
+<body>
+
+    <header>
+
+        <h1>Panel de Órdenes</h1>
+
+        <!-- MENU -->
+        <nav class="menu">
+
+            <button onclick="abrirTienda()">
+                Tienda
+            </button>
+
+            <button onclick="abrirInventarios()">
+                Inventarios
+            </button>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section>
+
+            <h2>Órdenes Registradas</h2>
+
+            <div class="tabla-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Productos Comprados</th>
+                            <th>Total</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabla-ordenes">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="ordenesscript.js"></script>
+
+</body>
+</html>
