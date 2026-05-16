@@ -84,6 +84,27 @@ app.post("/ordenes",(req,res)=>{
     );
 });
 
+// =========================
+// OBTENER ORDENES
+// =========================
+
+app.get("/ordenes", (req,res) => {
+
+    const sql = "SELECT * FROM ordenes";
+
+    db.query(sql, (err,result) => {
+
+        if(err){
+
+            res.status(500).json(err);
+
+        }else{
+
+            res.json(result);
+        }
+    });
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
