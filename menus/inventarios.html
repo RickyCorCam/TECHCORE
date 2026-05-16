@@ -1,0 +1,116 @@
+```html id="v5n8q1"
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario TI</title>
+
+    <link rel="stylesheet" href="inventariostyles.css">
+</head>
+<body>
+
+    <header>
+
+        <h1>Panel de Inventario</h1>
+
+        <!-- MENU -->
+        <nav class="menu">
+
+            <button onclick="abrirTienda()">
+                Tienda
+            </button>
+
+            <button onclick="abrirOrdenes()">
+                Órdenes
+            </button>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- HARDWARE -->
+        <section>
+
+            <h2>Hardware</h2>
+
+            <div class="tabla-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Producto</th>
+                            <th>Categoría</th>
+                            <th>Marca</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabla-hardware">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- LICENCIAS -->
+        <section>
+
+            <h2>Licencias</h2>
+
+            <div class="tabla-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Licencia</th>
+                            <th>Tipo</th>
+                            <th>Empresa</th>
+                            <th>Precio</th>
+                            <th>Duración</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabla-licencias">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="inventarioscripts.js"></script>
+
+    <script>
+
+        function abrirTienda(){
+
+            window.location.href = "index.html";
+        }
+
+        function abrirOrdenes(){
+
+            window.location.href = "ordenes.html";
+        }
+
+    </script>
+
+</body>
+</html>
+```

@@ -179,3 +179,21 @@ document
 
 cargarHardware();
 cargarLicencias();
+
+// =========================
+// ABRIR INVENTARIOS
+// =========================
+
+function abrirInventarios(){
+
+    window.location.href = "inventarios.html";
+}
+
+// =========================
+// ABRIR ORDENES
+// =========================
+
+function abrirOrdenes(){
+
+    window.location.href = "ordenes.html";
+}
