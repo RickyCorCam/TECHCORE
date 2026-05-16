@@ -1,47 +1,103 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda TI</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Login - Hardware Store</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#1e1e2f;
+        }
+
+        .login-container{
+            background:white;
+            padding:40px;
+            border-radius:15px;
+            width:350px;
+            box-shadow:0 0 20px rgba(0,0,0,0.3);
+        }
+
+        .login-container h2{
+            text-align:center;
+            margin-bottom:25px;
+            color:#333;
+        }
+
+        .input-group{
+            margin-bottom:20px;
+        }
+
+        .input-group label{
+            display:block;
+            margin-bottom:5px;
+            color:#555;
+        }
+
+        .input-group input{
+            width:100%;
+            padding:12px;
+            border:1px solid #ccc;
+            border-radius:8px;
+            font-size:15px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            border:none;
+            border-radius:8px;
+            background:#4a6cf7;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#3554d1;
+        }
+
+        .error{
+            color:red;
+            text-align:center;
+            margin-top:15px;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Tienda de Hardware y Licencias</h1>
-    </header>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
 
-    <main>
+        <div class="input-group">
+            <label>Usuario</label>
+            <input type="text" id="usuario" placeholder="Ingresa tu usuario">
+        </div>
 
-        <!-- PRODUCTOS HARDWARE -->
-        <section>
-            <h2>Productos Hardware</h2>
-            <div id="hardware-container" class="productos"></div>
-        </section>
+        <div class="input-group">
+            <label>Contraseña</label>
+            <input type="password" id="password" placeholder="Ingresa tu contraseña">
+        </div>
 
-        <!-- PRODUCTOS LICENCIAS -->
-        <section>
-            <h2>Licencias</h2>
-            <div id="licencias-container" class="productos"></div>
-        </section>
+        <button onclick="login()">Entrar</button>
 
-        <!-- CARRITO -->
-        <section class="carrito">
-            <h2>Carrito</h2>
+        <p class="error" id="mensaje"></p>
+    </div>
 
-            <ul id="lista-carrito"></ul>
-
-            <h3>Total: $<span id="total">0</span></h3>
-
-            <button id="btn-comprar">
-                Finalizar Compra
-            </button>
-        </section>
-
-    </main>
-
-    <script src="script.js"></script>
+    <script src="login.js"></script>
 
 </body>
 </html>

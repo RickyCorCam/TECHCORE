@@ -45,6 +45,20 @@ app.get("/productos_licencias", (req,res)=>{
     );
 });
 
+app.get("/usuarios", (req,res) => {
+
+    const sql = "SELECT * FROM usuarios";
+
+    db.query(sql, (err,result) => {
+
+        if(err){
+            res.status(500).json(err);
+        }else{
+            res.json(result);
+        }
+    });
+});
+
 app.post("/ordenes",(req,res)=>{
 
     const {
